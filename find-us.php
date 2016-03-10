@@ -6,6 +6,8 @@ Description: Integrates facebook and twitter profile link with your WordPress we
 Author: Iftekher Islam Sunny
 Version: 1.0
 Author URI: http://iftekhersunny.com
+License: MIT
+Text Domain: find_us
 */
 
 /** Absolute path to the WordPress directory. */

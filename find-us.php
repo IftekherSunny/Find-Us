@@ -7,7 +7,7 @@ Author: Iftekher Islam Sunny
 Version: 1.0
 Author URI: http://iftekhersunny.com
 License: MIT
-Text Domain: find_us
+Text Domain: find_us_domain
 */
 
 /** Absolute path to the WordPress directory. */

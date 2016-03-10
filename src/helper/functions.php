@@ -14,7 +14,7 @@ if( ! function_exists('find_us_view')) {
             $find_us_view = new FindUs\View(
                 __DIR__ . '/../views',
                 __DIR__ . '/../compile/views',
-                true
+                false
             );
         }
 

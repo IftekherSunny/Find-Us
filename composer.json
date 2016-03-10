@@ -1,0 +1,19 @@
+{
+  "name": "sun/find-us",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Iftekher Sunny",
+      "email": "iftekhersunny@hotmail.com",
+      "homepage": "http://iftekhersunny.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FindUs\\": "src/classes/"
+    },
+    "files": [
+      "src/helper/functions.php"
+    ]
+  }
+}

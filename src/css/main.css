@@ -1,0 +1,27 @@
+/*
+Plugin name: Find us
+version: 1.0.0
+*/
+.find-us-social-media {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+a.find-us-facebook {
+    border: 0px !important;
+}
+
+a.find-us-facebook span.dashicons.dashicons-facebook {
+    font-size: 30px;
+    margin-top: 1px;
+}
+
+a.find-us-twitter {
+    border: 0px !important;
+    margin-left: 10px;
+}
+
+a.find-us-twitter span.dashicons.dashicons-twitter {
+    font-size: 30px;
+    margin-top: 1px;
+}

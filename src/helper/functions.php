@@ -28,9 +28,9 @@ if( ! function_exists('find_us_view')) {
  * @return string
  */
 function find_us_get_facebook_username() {
-    $find_us_settings = get_option('find_us_settings');
+    $find_us_settings = get_option('find_us_settings_facebook');
 
-    return !empty($find_us_settings['facebook_username'])? $find_us_settings['facebook_username'] : 'profile.php?id=100002837300191';
+    return !empty($find_us_settings['username'])? $find_us_settings['username'] : 'profile.php?id=100002837300191';
 }
 
 /**
@@ -39,9 +39,9 @@ function find_us_get_facebook_username() {
  * @return string
  */
 function find_us_facebook_is_enable() {
-    $find_us_settings = get_option('find_us_settings');
+    $find_us_settings = get_option('find_us_settings_facebook');
 
-    return isset($find_us_settings['facebook_enable'])? true : false;
+    return isset($find_us_settings['enable'])? true : false;
 }
 
 
@@ -51,9 +51,9 @@ function find_us_facebook_is_enable() {
  * @return string
  */
 function find_us_get_twitter_username() {
-    $find_us_settings = get_option('find_us_settings');
+    $find_us_settings = get_option('find_us_settings_twitter');
 
-    return !empty($find_us_settings['twitter_username'])? $find_us_settings['twitter_username'] : 'IftekherSunny';
+    return !empty($find_us_settings['username'])? $find_us_settings['username'] : 'IftekherSunny';
 }
 
 /**
@@ -62,7 +62,23 @@ function find_us_get_twitter_username() {
  * @return string
  */
 function find_us_twitter_is_enable() {
-    $find_us_settings = get_option('find_us_settings');
+    $find_us_settings = get_option('find_us_settings_twitter');
 
-    return isset($find_us_settings['twitter_enable'])? true : false;
+    return isset($find_us_settings['enable'])? true : false;
+}
+
+/**
+ * Determine tab activation in the find us settings page.
+ *
+ * @return string
+ */
+function get_active_tab() {
+
+    $active_tab = 'facebook';
+
+    if( isset( $_GET[ 'tab' ] ) ) {
+        $active_tab = $_GET[ 'tab' ];
+    }
+
+    return $active_tab;
 }

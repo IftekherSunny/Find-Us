@@ -94,3 +94,37 @@ function get_active_tab() {
 function find_us_include_view($view, $data = []) {
     return find_us_view($view, $data);
 }
+
+/**
+ * Facebook settings validation.
+ *
+ * @param array $input
+ *
+ * @return mixed
+ */
+function find_us_settings_facebook_validation($input) {
+    if(empty($input['username'])) {
+        add_settings_error( 'find_us_settings_facebook', 'facebook-username-required', 'The username field is required.', 'error' );
+    } else {
+        add_settings_error( 'find_us_settings_facebook', 'facebook-settings-updated', 'Facebook settings updated.', 'updated' );
+    }
+
+    return $input;
+}
+
+/**
+ * Twitter settings validation.
+ *
+ * @param array $input
+ *
+ * @return mixed
+ */
+function find_us_settings_twitter_validation($input) {
+    if(empty($input['username'])) {
+        add_settings_error( 'find_us_settings_twitter', 'twitter-username-required', 'The username field is required.', 'error' );
+    } else {
+        add_settings_error( 'find_us_settings_twitter', 'twitter-settings-updated', 'Twitter settings updated.', 'updated' );
+    }
+
+    return $input;
+}

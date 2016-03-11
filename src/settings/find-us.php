@@ -20,6 +20,6 @@ add_action('admin_menu', function() {
 
 /** Register find us settings */
 add_action('admin_init', function () {
-   register_setting('find_us_settings_group_facebook', 'find_us_settings_facebook');
-   register_setting('find_us_settings_group_twitter', 'find_us_settings_twitter');
+   register_setting('find_us_settings_group_facebook', 'find_us_settings_facebook', 'find_us_settings_facebook_validation');
+   register_setting('find_us_settings_group_twitter', 'find_us_settings_twitter', 'find_us_settings_twitter_validation');
 });

@@ -82,3 +82,15 @@ function get_active_tab() {
 
     return $active_tab;
 }
+
+/**
+ * Include partial view.
+ *
+ * @param string $view
+ * @param array  $data
+ *
+ * @return string
+ */
+function find_us_include_view($view, $data = []) {
+    return find_us_view($view, $data);
+}

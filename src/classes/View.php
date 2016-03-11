@@ -100,9 +100,7 @@ class View
         if ($this->debug || !file_exists($compiledViewPath)) {
             $view = file_get_contents($viewFile);
 
-            $view = str_replace("{{", "<?php echo ", $view);
-
-            $view = str_replace("}}", "?>", $view);
+            $view = str_replace([ "{{", "}}" ], [ "<?php echo ", "?>" ], $view);
 
             file_put_contents($compiledViewPath, $view);
         }

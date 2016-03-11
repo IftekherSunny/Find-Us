@@ -3,6 +3,9 @@
         {{ __('Find Us Settings', 'find_us_domain') }}
     </h2>
 
+    <!-- Make a call to the WordPress function for rendering errors when settings are saved. -->
+    <?php settings_errors(); ?>
+
     <!-- start form -->
     <form action="options.php" method="post">
         {{ settings_fields('find_us_settings_group') }}
